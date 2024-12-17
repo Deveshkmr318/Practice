@@ -1,3 +1,5 @@
+package StreamsAPI;
+
 public class StreamsAPIMedium {
     
 

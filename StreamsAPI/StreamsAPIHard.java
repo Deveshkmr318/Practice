@@ -1,3 +1,5 @@
+package StreamsAPI;
+
 public class StreamsAPIHard {
 
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package StreamsAPI;
 
 import java.util.*;
 import java.util.stream.*;

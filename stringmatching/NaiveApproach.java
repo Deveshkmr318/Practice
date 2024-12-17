@@ -1,4 +1,4 @@
-package stringmatching;
+package StringMatching;
 
 public class NaiveApproach {
     

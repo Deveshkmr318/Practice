@@ -1,3 +1,5 @@
+package StreamsAPI;
+
 public class StreamsAPIPractice {
     
     public static void main(String[] args) {
