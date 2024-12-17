@@ -1,6 +1,6 @@
 package SortingTechniques;
 
-public class BubbleSorting{
+public class BubbleSort{
 
     private static int[] table = null;
 
