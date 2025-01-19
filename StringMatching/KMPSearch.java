@@ -11,18 +11,17 @@ public class KMPSearch {
 
         String text = "DEVESH KUMAR SINGH";
 
-        String pat = "MAR";
+        String pat = "S";
 
-        int x = patMatch(text, pat);
+        patMatch(text, pat);
 
         int[] LPS = lps(pat + "$" + text);
 
         System.out.println(Arrays.toString(LPS));
-        
-        System.out.println("Pattern Matched at " + x);
+
     }
         
-    private static int patMatch(String text, String pat) {
+    private static void patMatch(String text, String pat) {
                 
         int n = text.length();
         int m = pat.length();
@@ -37,24 +36,33 @@ public class KMPSearch {
         while(i < n){
 
             while(j < m && pat.charAt(j) == text.charAt(i)){
+
                 i++;
                 j++;
+
             }
 
             if(j == m){
-                return i-m+1;
+
+                System.out.println(" Found at " + (i-m+1));
+                j = LPS[j-1];
+
             }else{
+
                 if(j >= 1){
+
                     j = LPS[j-1];
+
                 }else{
+
                     j = 0;
                     i++;
+
                 }
+
             }
 
         }
-
-        return -1;
                 
     }
         
@@ -68,14 +76,20 @@ public class KMPSearch {
             int x = ans[i - 1];
             
             while (pat.charAt(x) != pat.charAt(i)) {
+
                 if (x == 0) { 
+
                     x = -1; 
                     break; 
+
                 }
+
                 x = ans[x - 1];
+
             }
             
             ans[i] = x + 1;
+
         }
         
         // int x = 1;
@@ -84,15 +98,22 @@ public class KMPSearch {
         // while(x < n){
 
         //     if(pat.charAt(x) == pat.charAt(y)){
+
         //         ans[x] = ans[x-1] + 1;
         //         x++;
         //         y++;
+
         //     }else{
+
         //         if(y >= 1){
+
         //             y = ans[y-1];
+
         //         }else{
+
         //             y = 0;
         //             x++;
+        
         //         }
         //     }
         // }
